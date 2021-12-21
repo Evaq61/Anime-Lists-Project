@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime List</title>
+    <!-- CSS Link? -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/dashboard.css') }}">
+</head>
+<body>
+    <div class=nav_bar>
+        <button class=logout>
+            <a  href="/dashboard">Home</a>
+        </button>
+        <button class=logout>
+            <a  href="/logout">Logout</a>
+        </button>
+    </div>
+    <h3>My List</h3>
+    <div class = container>
+        <div class=table_content>
+            <table>
+                <thead>
+                    <tr>
+                        <td> Title </td>
+                        <td> Current Status </td>
+                    </tr>
+                </thead>
+                <tbody> <!-- Fix My List Box to Show my list WITH delete buttons -->
+                </tbody> 
+            </table>
+        </div>
+    </div>
+    <button class=edit_list>
+        <a href="/dashboard">Update List</a>  <!-- Fix Update Link Later -->
+    </button>
+
+
+
+
+
+    <!-- JS Link?-->
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>

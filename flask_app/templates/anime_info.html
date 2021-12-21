@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime List</title>
+    <!-- CSS Link? -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/dashboard.css') }}">
+</head>
+<body>
+    <div class=nav_bar>
+        <button class=logout>
+            <a  href="/dashboard">Home</a>
+        </button>
+        <button class=logout>
+            <a  href="/logout">Logout</a>
+        </button>
+    </div>
+    <h1>Name of Anime</h1>
+    <h2>Author</h2>
+    <div class=container>
+        <div>
+            <p>Number of Episodes</p>
+            <p>Series Current Status: Ongoing or Completed</p>
+            <p>Description of the Anime</p>
+        </div>
+        <div>
+            <p>Img of Anime</p>
+            <div class="my_status">
+                <label for="1">Completed</label>
+                <input type="radio" name="my_status" value="Completed" id="completed">
+                <label for="2">In Progress</label>
+                <input type="radio" name="my_status" value="In Progress" id="in_progress">
+                <label for="3">Not Started Yet</label>
+                <input type="radio" name="my_status" value="Not_started_yet" id="not_started_yet">
+            </div>
+        </div>
+    </div>
+        
+
+
+
+    <!-- JS Link?-->
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>

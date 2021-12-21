@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime List</title>
+    <!-- CSS Link? -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+</head>
+<body>
+    <h1>Welcome to You Anime List!! <br>
+        Please Sign in or Register</h1>
+    <div class=container>
+        <div class=register>
+            <h2>Register</h2>
+            <form class=register action="/create_user" method ="POST">
+                <label for='first_name'>First Name</label>
+                <input type="text" name="first_name">
+                {% for message in get_flashed_messages(category_filter=["err_user_first_name"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <label for='last_name'>Last Name</label>
+                <input type="text" name="last_name">
+                {% for message in get_flashed_messages(category_filter=["err_user_last_name"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <label for='email'>Email</label>
+                <input type="text" name="email">
+                {% for message in get_flashed_messages(category_filter=["err_user_email"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <label for='password'>Password</label>
+                <input type="password" name="password">
+                {% for message in get_flashed_messages(category_filter=["err_user_password"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <label for='confirm_pw'>Confirm Password</label>
+                <input type="password" name="confirm_pw">
+                {% for message in get_flashed_messages(category_filter=["err_user_confirm_password"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <input class= button type="submit" value="Register">
+            </form>
+        </div>
+        <div class=login>
+            <h2>Login</h2>
+            <form class=login action="/login" method ="POST">
+                <label for='email'>Email</label>
+                <input type="text" name="email">
+                <label for='password'>Password</label>
+                <input type="password" name="password">
+                {% for message in get_flashed_messages(category_filter=["err_user_login"]) %}
+                <p>{{ message }}</p>
+                {% endfor %}
+                <input class=button type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- linking an image -->
+    <!-- <img src="{{ url_for('static', filename='/img/img.png') }}"> -->
+
+    <!-- JS Link?-->
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+</body>
+</html>

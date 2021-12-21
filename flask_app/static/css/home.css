@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.button{
+    width:100px;
+    margin: 20px 0px
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
