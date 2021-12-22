@@ -32,10 +32,11 @@
             </table>
         </div>
         <div >
-            <form action="/anime_search" class = search>
-                <label for="search">Search</label> <!-- Fix Search Bar -->
-                <input type="text" name="search_input">
-                <input type="submit" value="search">
+            <form action="/anime_search" id="searchBar" class = searchBar>
+                <label for="search">Search an Anime Title</label>
+                <input id="search" type="text" autocomplete="off" />
+                <div id="clear" class="none button clear" role="button" tabindex="0" aria-label="clear search terms"> X </div>
+                <button id="searchButton" class="button searchButton" type="submit" aria-label="Submit button">Search</button>
             </form>
         </div>
     </div>
