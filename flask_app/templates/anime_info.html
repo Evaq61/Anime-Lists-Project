@@ -13,20 +13,25 @@
         <button class=logout>
             <a  href="/dashboard">Home</a>
         </button>
+        <button class = btn>
+            <a href="/anime_search">Search for More Anime</a>  <!-- Fix Edit Link Later -->
+        </button>
         <button class=logout>
             <a  href="/logout">Logout</a>
         </button>
     </div>
-    <h1>Name of Anime</h1>
-    <h2>Author</h2>
+    <h1 class="anime" anime_id="{{id}}">Name of Anime</h1>
     <div class=container>
         <div>
-            <p>Number of Episodes</p>
-            <p>Series Current Status: Ongoing or Completed</p>
-            <p>Description of the Anime</p>
+            <p class="episode_count">Number of Episodes</p>
+            <p class="status">Series Current Status: Ongoing or Completed</p>
+            <p class="synopsis">Description of the Anime</p>
         </div>
         <div>
-            <p>Img of Anime</p>
+            <!-- <img class="anime_img" src="" alt="Img of the Anime" -->
+            <span class="anime_img">
+                
+            </span>
             <div class="my_status">
                 <label for="1">Completed</label>
                 <input type="radio" name="my_status" value="Completed" id="completed">
@@ -43,5 +48,6 @@
 
     <!-- JS Link?-->
     <script type="text/javascript" src="{{ url_for('static', filename='/js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/test.js') }}"></script>
 </body>
 </html>

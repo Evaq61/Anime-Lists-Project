@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class=nav_bar>
+        <h1>Edit your list, {{user.first_name}}!</h1>
         <button class=logout>
             <a  href="/dashboard">Home</a>
         </button>
@@ -17,7 +18,7 @@
             <a  href="/logout">Logout</a>
         </button>
     </div>
-    <h3>My List</h3>
+    <h3 class=mylist>My List</h3>
     <div class = container>
         <div class=table_content>
             <table>
@@ -31,10 +32,12 @@
                 </tbody> 
             </table>
         </div>
+        <div class="btn_box">
+            <button class=edit_list>
+                <a href="/dashboard">Update List</a>  <!-- Fix Update Link Later -->
+            </button>
+        </div>
     </div>
-    <button class=edit_list>
-        <a href="/dashboard">Update List</a>  <!-- Fix Update Link Later -->
-    </button>
 
 
 

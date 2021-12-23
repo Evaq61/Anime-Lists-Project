@@ -32,7 +32,8 @@ def logout_user():
 # ***************************** Go To Edit List Page
 @app.route('/mylist/edit')
 def edit_my_list():
-    return render_template ('edit_list.html')
+    user = model_user.User.get_one_user({'id': session['user_id']})
+    return render_template ('edit_list.html', user=user)
 
 
 # ***************************** Results of the Search Bar
@@ -43,6 +44,10 @@ def anime_search_results():
 
 
 # ***************************** Anime Info Page
-@app.route('/anime/info')
-def show_anime_info():
-    return render_template ('anime_info.html')
+@app.route('/anime/info/<int:id>')
+def show_anime_info(id):
+    print("********")
+    print(id)
+    print("********")
+
+    return render_template ('anime_info.html', id = id)
